@@ -1,3 +1,6 @@
+parameters:
+    sylius_core.public_dir: '%kernel.project_dir%/public'
+
 imports:
     - { resource: "services.yaml" }
     - { resource: "sylius/ui.yaml" }
@@ -8,8 +11,12 @@ knp_gaufrette:
     adapters:
         monsieurbiz_rich_editor_fixture_file:
             local:
-                directory: '%sylius_core.public_dir%/media'
+                directory: '%kernel.project_dir%/public/media'
                 create: true
     filesystems:
         monsieurbiz_rich_editor_fixture_file:
             adapter: 'monsieurbiz_rich_editor_fixture_file'
+
+twig:
+    paths:
+        '%kernel.project_dir%/templates': 'app'
