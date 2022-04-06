@@ -16,6 +16,7 @@ namespace MonsieurBiz\SyliusRichEditorPlugin\Controller;
 use MonsieurBiz\SyliusRichEditorPlugin\Exception\UiElementNotFoundException;
 use MonsieurBiz\SyliusRichEditorPlugin\UiElement\RegistryInterface;
 use MonsieurBiz\SyliusRichEditorPlugin\Uploader\FileUploaderInterface;
+use MonsieurBiz\SyliusRichEditorPlugin\Uploader\FileUploaderInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType as NativeFileType;
 use Symfony\Component\Form\FormInterface;
@@ -177,6 +178,8 @@ class FormController extends AbstractController
     /**
      * Build a new form data array with the uploaded file path instead of files, or current filenames on edition.
      *
+     * @param FormInterface $form
+     * @param FileUploaderInterface $fileUploader
      * @param mixed $requestData
      *
      * @return array|mixed|string
@@ -198,6 +201,8 @@ class FormController extends AbstractController
     }
 
     /**
+     * @param FormInterface $form
+     * @param FileUploaderInterface $fileUploader
      * @param array|string $requestData
      *
      * @return array|mixed|string
