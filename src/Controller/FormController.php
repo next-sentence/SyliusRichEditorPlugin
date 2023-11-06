@@ -16,7 +16,6 @@ namespace MonsieurBiz\SyliusRichEditorPlugin\Controller;
 use MonsieurBiz\SyliusRichEditorPlugin\Exception\UiElementNotFoundException;
 use MonsieurBiz\SyliusRichEditorPlugin\UiElement\RegistryInterface;
 use MonsieurBiz\SyliusRichEditorPlugin\Uploader\FileUploaderInterface;
-use MonsieurBiz\SyliusRichEditorPlugin\Uploader\FileUploaderInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FileType as NativeFileType;
 use Symfony\Component\Form\FormInterface;
