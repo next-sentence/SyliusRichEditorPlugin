@@ -14,7 +14,6 @@ declare(strict_types=1);
 namespace MonsieurBiz\SyliusRichEditorPlugin\UiElement;
 
 use MonsieurBiz\SyliusRichEditorPlugin\Exception\UiElementNotFoundException;
-use ReturnTypeWillChange;
 use Webmozart\Assert\Assert;
 
 final class Registry implements RegistryInterface
@@ -69,8 +68,7 @@ final class Registry implements RegistryInterface
     /**
      * {@inheritdoc}
      */
-     #[ReturnTypeWillChange]
-    public function jsonSerialize(): mixed
+    public function jsonSerialize()
     {
         return $this->uiElements;
     }
